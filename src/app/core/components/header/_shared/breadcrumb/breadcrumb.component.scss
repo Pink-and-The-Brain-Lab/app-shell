@@ -1,0 +1,20 @@
+@import "variables";
+@import "em";
+
+.breadcrumb {
+    &__item {
+        font-size: to-em(14);
+        color: $emphasis-medium;
+        text-decoration: none;
+
+        &:first-child {
+            font-weight: 500;
+            font-size: to-em(18);
+            color: $emphasis-high;
+        }
+
+        i {
+            font-size: to-em(12);
+        }
+    }
+}

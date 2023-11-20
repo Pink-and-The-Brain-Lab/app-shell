@@ -1,0 +1,75 @@
+@import "variables";
+@import "em";
+@import "polygon-mask";
+
+@mixin buttonIconAnimation($value) {
+  i {
+    &::before {
+      -webkit-transform: rotate($value);
+      transform: rotate($value);
+      transition: all .2s ease-in-out;
+      transform-style: preserve-3d;
+    }
+  }
+}
+
+.actions-bar {
+    position: relative;
+    
+    &__toogleButton {
+        background-color: $surface-4;
+        border: 0;
+        width: 29px;
+        height: 32px;
+        position: absolute;
+        top: 17px;
+        right: -14px;
+        color: $emphasis-high;
+        font-size: to-em(11);
+        text-align: right;
+        padding-right: 3px;
+        @include hexagon-polygon();
+
+        &--opened {
+         @include buttonIconAnimation(180deg); 
+        }
+
+        &--closed {
+          @include buttonIconAnimation(0deg);
+        }
+      }
+
+      &__header {
+        &__text {
+          &--expanded {
+            opacity: 1;
+            z-index: 1;
+            transition: all .2s ease-in-out;
+            transition-delay: .2s;
+          }
+
+          &--closed {
+            opacity: 0;
+            z-index: -1;
+            transition: all .2s ease-in-out;
+          }
+
+          strong {
+              font-size: to-em(14);
+              color: $emphasis-high;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+          }
+  
+          span {
+              font-size: to-em(9);
+              color: $emphasis-medium;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              text-transform: uppercase;
+          }
+        }
+      }
+}

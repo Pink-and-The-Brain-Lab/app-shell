@@ -1,0 +1,36 @@
+@import "variables.scss";
+
+.app {
+    height: 100vh;
+
+    &__toolsBar {
+        width: 55px;
+        background-color: $surface-5;
+    }
+
+    &__actions-bar {
+        background-color: $surface-4;
+
+        &--closed {
+            width: 50px;
+            transition: all .2s ease-in-out;
+        }
+
+        &--expanded {
+            width: 192px;
+            transition: all .2s ease-in-out;
+        }
+    }
+
+    &__content {
+        background-color: $surface-3;
+
+        &__header {
+            height: 52px;
+        }
+
+        &__container {
+            overflow-y: auto;
+        }
+    }
+}

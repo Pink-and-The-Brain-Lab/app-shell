@@ -1,0 +1,16 @@
+<div
+    class="d-flex align-items-center justify-content-between w-100"
+    #content
+    (click)="showTimeoutOptions()"
+>
+    <span>
+        <i class="bi bi-clock-history"></i>
+        Timeout
+    </span>
+    
+    <i class="bi bi-chevron-right"></i>
+</div>
+
+<app-timeout-option
+    *cdkPopover="controlTimeoutptions; target: content; close: closeTimeoutOptions; positions: 'ETST'"
+></app-timeout-option>

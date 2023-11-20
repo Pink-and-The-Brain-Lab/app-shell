@@ -1,0 +1,150 @@
+<div class="quick-menu">
+    <div class="quick-menu__content d-flex">
+        <div class="quick-menu__content__collumn w-50 d-flex flex-column justify-content-between">
+            <div>
+                <div class="quick-menu__content__collumn__organization d-flex align-items-center">
+                    <cdk-avatar
+                        imageUrl="/assets/images/_temp-avatar.jpg"
+                        size="sm"
+                        mask="square"
+                    ></cdk-avatar>
+
+                    <div class="quick-menu__content__collumn__organization__title">Millez</div>
+                </div>
+
+                <div class="quick-menu__content__collumn__menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                                <i class="bi bi-building"></i>
+                                Organization
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                                <i class="bi bi-grid-1x2"></i>
+                                Template Center
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                                <i class="bi bi-bell"></i>
+                                Notifications
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="quick-menu__content__collumn__title">Explore</div>
+
+                <div class="quick-menu__content__collumn__menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                                <i class="bi bi-phone"></i>
+                                Download apps
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                                <i class="bi bi-globe2"></i>
+                                Go to Website
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button class="btn btn-success w-100">
+                <i class="bi bi-stars"></i>
+                Upgrade Plan
+            </button>
+        </div>
+
+        <div class="quick-menu__content__collumn w-50">
+            <div class="quick-menu__content__collumn__organization d-flex align-items-center">
+                <cdk-avatar
+                    imageUrl="/assets/images/_temp-avatar.jpg"
+                    size="sm"
+                    mask="circle"
+                    maskType="status"
+
+                ></cdk-avatar>
+
+                <div class="d-flex justify-content-center flex-column">
+                    <div class="quick-menu__content__collumn__organization__title">Millez</div>
+                    <div class="quick-menu__content__collumn__organization__role">[ZEL] manager</div>
+                </div>
+            </div>
+
+            <div class="quick-menu__content__collumn__title mt-0">My Preferences</div>
+
+            <div class="quick-menu__content__collumn__menu">
+                <ul>
+                    <li>
+                        <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                            <i class="bi bi-gear"></i>
+                            My Settings
+                        </a>
+                    </li>
+                    <li>
+                        <app-user-status></app-user-status>
+                    </li>
+                    <li>
+                        <app-theme-options></app-theme-options>
+                    </li>
+                    <li>
+                        <app-timeout></app-timeout>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                            <i class="bi bi-map"></i>
+                            Timezone
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                            <i class="bi bi-wifi"></i>
+                            Connections
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="quick-menu__content__collumn__title">Account Settings</div>
+    
+                <div class="quick-menu__content__collumn__menu">
+                    <ul>
+                        <li>
+                            <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                                <i class="bi bi-gear"></i>
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="d-flex align-items-center quick-menu__content__collumn__menu__item">
+                                <i class="bi bi-box-arrow-right"></i>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="quick-menu__footer d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <div class="quick-menu__footer__logo d-flex align-items-center">
+                <cdk-logo [size]="20"></cdk-logo>
+                <div class="quick-menu__footer__logo__version">Version  v2.4.2</div>
+                <div class="quick-menu__footer__logo__badge">new</div>
+            </div>
+        </div>
+
+        <div class="quick-menu__footer__do-not-disturb d-flex align-items-center">
+            <i class="bi bi-bell-slash"></i>
+            <span>Do not disturb</span>
+            <cdk-toogle></cdk-toogle>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+@import "variables";
+@import "em";
+
+.quick-menu {
+    width: 440px;
+
+    &__content {
+        &__collumn {
+            padding: 16px;
+
+            &:first-child {
+                border-right: 1px solid $spacer;
+            }
+
+            &__organization {
+                margin-bottom: 24px;
+
+                &__title {
+                    font-weight: 600;
+                    font-size: to-em(14);
+                    color: $emphasis-high;
+                    margin-left: 8px;
+                }
+
+                &__role {
+                    font-weight: 700;
+                    font-size: to-em(9);
+                    text-transform: uppercase;
+                    color: $emphasis-low;
+                    margin: 0 0 0 8px;
+                }
+            }
+
+            &__menu {
+                li {
+                    margin-bottom: 16px;
+                }
+                
+                &__item {
+                    font-weight: 400;
+                    font-size: to-em(14);
+                    color: $emphasis-medium;
+                    text-decoration: none;
+
+                    &:hover {
+                        color: $emphasis-high;
+                    }
+
+                    i {
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            &__title {
+                font-size: to-em(12);
+                color: $emphasis-low;
+                margin: 24px 0 16px;
+            }
+        }
+    }
+
+    &__footer {
+        border-top: 1px solid $spacer;
+        padding: 16px;
+
+        &__logo {
+            &__version {
+                margin: 0 8px;
+                font-size: to-em(12);
+                color: $emphasis-high;
+            }
+
+            &__badge {
+                padding: 2px 8px;
+                background: $st-red;
+                border-radius: 8px;
+                font-size: to-em(8);
+                text-transform: uppercase;
+                color: $white;
+            }
+        }
+
+        &__do-not-disturb {
+            font-size: to-em(14);
+            color: $emphasis-medium;
+
+            span {
+                display: inline-flex;
+                margin: 0 8px;
+            }
+        }
+    }
+
+    cdk-user-status,
+    cdk-theme-options {
+        margin-bottom: 16px;
+    }
+}

@@ -1,0 +1,136 @@
+<nav class="navigation-bar">
+    <ul class="m-0 p-0">
+        <li class="d-block px-2">
+            <a
+                href="#"
+                class="navigation-bar__link navigation-bar__link--active d-flex align-items-center px-2 py-1"
+                tooltip="Dashboard"
+                placement="right"
+                [display]="!toggleActionsBar"
+            >
+                <i class="bi bi-grid-1x2"></i>
+                <span
+                    class="ms-2 navigation-bar__link__text"
+                    [class.navigation-bar__link__text--expanded]="toggleActionsBar"
+                    [class.navigation-bar__link__text--closed]="!toggleActionsBar"
+                >
+                    Dashboard
+                </span>
+            </a>
+        </li>
+        
+        <li class="d-block px-2">
+            <a
+                href="#"
+                class="navigation-bar__link d-flex align-items-center px-2 py-1"
+                tooltip="Projects"
+                placement="right"
+                [display]="!toggleActionsBar"
+            >
+                <i class="bi bi-kanban"></i>
+                <span
+                    class="ms-2 navigation-bar__link__text"
+                    [class.navigation-bar__link__text--expanded]="toggleActionsBar"
+                    [class.navigation-bar__link__text--closed]="!toggleActionsBar"
+                >
+                    Projects
+                </span>
+            </a>
+        </li>
+        
+        <li class="d-block px-2">
+            <a
+                href="#"
+                class="navigation-bar__link d-flex align-items-center px-2 py-1"
+                tooltip="Calendar"
+                placement="right"
+                [display]="!toggleActionsBar"
+            >
+                <i class="bi bi-calendar2-week"></i>
+                <span
+                    class="ms-2 navigation-bar__link__text"
+                    [class.navigation-bar__link__text--expanded]="toggleActionsBar"
+                    [class.navigation-bar__link__text--closed]="!toggleActionsBar"
+                >
+                    Calendar
+                </span>
+            </a>
+        </li>
+        
+        <li class="d-block px-2">
+            <a
+                href="#"
+                class="navigation-bar__link d-flex align-items-center px-2 py-1"
+                tooltip="Meet"
+                placement="right"
+                [display]="!toggleActionsBar"
+            >
+                <i class="bi bi-camera-video"></i>
+                <span
+                    class="ms-2 navigation-bar__link__text"
+                    [class.navigation-bar__link__text--expanded]="toggleActionsBar"
+                    [class.navigation-bar__link__text--closed]="!toggleActionsBar"
+                >
+                    Meet
+                </span>
+            </a>
+        </li>
+        
+        <li class="d-block px-2">
+            <a
+                href="#"
+                class="navigation-bar__link d-flex align-items-center px-2 py-1"
+                tooltip="Docs"
+                placement="right"
+                [display]="!toggleActionsBar"
+            >
+                <i class="bi bi-file-earmark-text"></i>
+                <span
+                    class="ms-2 navigation-bar__link__text"
+                    [class.navigation-bar__link__text--expanded]="toggleActionsBar"
+                    [class.navigation-bar__link__text--closed]="!toggleActionsBar"
+                >
+                    Docs
+                </span>
+            </a>
+        </li>
+        
+        <li class="d-block px-2">
+            <a
+                href="#"
+                class="navigation-bar__link d-flex align-items-center px-2 py-1"
+                tooltip="Contacts"
+                placement="right"
+                [display]="!toggleActionsBar"
+            >
+                <i class="bi bi-people"></i>
+                <span
+                    class="ms-2 navigation-bar__link__text"
+                    [class.navigation-bar__link__text--expanded]="toggleActionsBar"
+                    [class.navigation-bar__link__text--closed]="!toggleActionsBar"
+                >
+                    Contacts
+                </span>
+            </a>
+        </li>
+        
+        <li class="d-block px-2">
+            <a
+                href="#"
+                class="navigation-bar__link d-flex align-items-center px-2 py-1"
+                tooltip="Organization"
+                placement="right"
+                [display]="!toggleActionsBar"
+            >
+                <i class="bi bi-building"></i>
+                <span
+                    class="ms-2 navigation-bar__link__text"
+                    [class.navigation-bar__link__text--expanded]="toggleActionsBar"
+                    [class.navigation-bar__link__text--closed]="!toggleActionsBar"
+                >
+                    Organization
+                </span>
+            </a>
+        </li>
+    </ul>
+</nav>

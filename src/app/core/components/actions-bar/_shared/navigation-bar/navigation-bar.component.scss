@@ -1,0 +1,39 @@
+@import "variables";
+@import "em";
+
+.navigation-bar {
+    &__link {
+        border-radius: 7px;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: to-em(16);
+        color: $emphasis-low;
+        font-weight: 600;
+    
+        &:hover {
+            color: $emphasis-medium;
+        }
+    
+        &--active {
+            background-color: $alpha-10;
+            color: $emphasis-medium;
+        }
+    
+        &__text {
+            font-size: to-em(11);
+
+            &--expanded {
+                opacity: 1;
+                z-index: 1;
+                transition: opacity .2s ease-in-out;
+                transition-delay: .2s;
+              }
+    
+              &--closed {
+                opacity: 0;
+                z-index: -1;
+                transition: opacity .2s ease-in-out;
+              }
+        }
+    }
+}

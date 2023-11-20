@@ -1,0 +1,26 @@
+@import "variables";
+@import "em";
+
+:host {
+    display: block;
+    width: 100%;
+    padding: 8px;
+
+    div {
+        font-weight: 400;
+        font-size: to-em(14);
+        color: $emphasis-medium;
+        cursor: pointer;
+    
+        &:hover {
+            color: $emphasis-high;
+        }
+    
+        .status {
+            width: 12px;
+            height: 12px;
+            margin-right: 5px;
+            display: inline-flex;
+        }
+    }
+}

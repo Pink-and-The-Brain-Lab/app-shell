@@ -1,0 +1,4 @@
+<div *ngFor="let item of statusOptions" class="d-flex align-items-center w-100">
+    <cdk-user-status-bullet class="status" [status]="item.status"></cdk-user-status-bullet>
+    {{ item.label }}
+</div>

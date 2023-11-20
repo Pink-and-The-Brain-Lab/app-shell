@@ -1,0 +1,29 @@
+<ng-container *ngIf="isLoggedIn">
+    <main class="app d-flex">
+        <div class="app__toolsBar h-100 flex-grow-0">
+            <app-tools-bar></app-tools-bar>
+        </div>
+
+        <div
+            class="app__actions-bar h-100 flex-grow-0"
+            [class.app__actions-bar--expanded]="toogleActionsBar"
+            [class.app__actions-bar--closed]="!toogleActionsBar"
+        >
+            <app-actions-bar (actionsBarEvent)="actionsBarEvent()"></app-actions-bar>
+        </div>
+
+        <div class="app__content d-flex flex-column h-100 flex-grow-1 w-100">
+            <header class="app__content__header p-3 flex-grow-0">
+                <app-header></app-header>
+            </header>
+            
+            <div class="app__content__container h-100 flex-grow-1 p-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </main>
+</ng-container>
+
+<ng-container *ngIf="!isLoggedIn">
+    <router-outlet></router-outlet>
+</ng-container>

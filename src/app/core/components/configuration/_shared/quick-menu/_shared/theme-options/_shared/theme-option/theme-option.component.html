@@ -1,0 +1,9 @@
+<ng-container *ngFor="let option of themeOptions">
+    <cdk-radio
+        name="theme-option"
+        position="end"
+        [(ngModel)]="selectedOption"
+        [value]="option"
+        (ngModelChange)="getSelectedOption($event)"
+    >{{ option }}</cdk-radio>
+</ng-container>

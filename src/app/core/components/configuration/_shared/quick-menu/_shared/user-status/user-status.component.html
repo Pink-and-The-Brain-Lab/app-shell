@@ -1,0 +1,16 @@
+<div
+    class="d-flex align-items-center justify-content-between w-100"
+    #content
+    (click)="showStatusOptions()"
+>
+    <span>
+        <cdk-user-status-bullet class="status"></cdk-user-status-bullet>
+        Online
+    </span>
+    
+    <i class="bi bi-chevron-right"></i>
+</div>
+
+<app-user-status-options
+    *cdkPopover="controlStatusOptions; target: content; close: closeStatusOptions; positions: 'ETST'"
+></app-user-status-options>

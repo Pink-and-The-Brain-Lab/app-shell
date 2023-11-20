@@ -1,0 +1,21 @@
+@import "variables";
+@import "em";
+
+div {
+    cursor: pointer;
+    
+    * {
+        transition: color .3s ease-in-out;
+    }
+
+    &:hover {
+        i {
+            color: $emphasis-high;    
+        }
+    }
+
+    i {
+        font-size: to-em(18);
+        color: $emphasis-low;
+    }
+}

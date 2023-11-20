@@ -1,0 +1,16 @@
+<div
+    class="d-flex align-items-center justify-content-between w-100"
+    #content
+    (click)="showThemeOptions()"
+>
+    <span>
+        <i class="bi bi-palette"></i>
+        Themes
+    </span>
+    
+    <i class="bi bi-chevron-right"></i>
+</div>
+
+<app-theme-option
+    *cdkPopover="controlThemeOptions; target: content; close: closeThemeOptions; positions: 'ETST'"
+></app-theme-option>

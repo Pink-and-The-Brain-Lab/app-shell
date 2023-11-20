@@ -1,0 +1,11 @@
+<div
+    class="d-flex p-2 w-100"
+    tooltip="Configurations"
+    placement="right"
+    (click)="openQuickMenu()"
+    #content
+>
+    <i class="bi bi-gear"></i>
+</div>
+
+<app-quick-menu *cdkPopover="quickMenuControl; target: content; close: closeQuickMenu"></app-quick-menu>
