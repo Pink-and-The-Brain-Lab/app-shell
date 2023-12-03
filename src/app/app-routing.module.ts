@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthdGuard } from './shared/authguard.guard';
+import { TranslateModule } from '@ngx-translate/core';
+import { I18N_CONFIG } from 'millez-components-lib/components';
 
 const routes: Routes = [{
   path: '',
@@ -17,7 +19,10 @@ const routes: Routes = [{
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes),
+    TranslateModule.forRoot(I18N_CONFIG),
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

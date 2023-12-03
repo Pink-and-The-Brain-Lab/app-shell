@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './shared/auth.service';
+import { I18nService } from './services/i18n/i18n.service';
 
 @Component({
   selector: 'app-root',
@@ -13,9 +14,11 @@ export class AppComponent {
   isLoggedIn = false;
 
   constructor(
-    private authService: AuthService
+    private authService: AuthService,
+    private i18nService: I18nService,
   ) {
     this.isLoggedIn = this.authService.isLoggedIn();
+    this.i18nService.start();
   }
 
   actionsBarEvent() {
