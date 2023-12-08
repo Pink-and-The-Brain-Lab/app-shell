@@ -39,5 +39,19 @@
     "USER_AGREEMENT_TERMS": "Términos y condiciones del Acuerdo de usuario",
     "ALREADY_HAVE_AN_ACCOUNT": "¿Ya tienes una cuenta?",
     "DIDNT_RECIEVE_AN_EMAIL": "¿No recibiste un correo electrónico? Es posible que tarde unos minutos en recibir el correo electrónico.",
-    "RESEND": "Reenviar"
+    "RESEND": "Reenviar",
+
+
+    "API_ERRORS": {
+        "ERROR_TO_SAVE_NEW_PASSWORD": "¡Error al guardar la nueva contraseña!",
+        "NEW_PASSWORD_AND_OLD_PASSWORD_CAN_NOT_BE_EQUALS": "¡La nueva contraseña y la antigua no pueden ser iguales!",
+        "THIS_EMAIL_WAS_REGISTERED_PLEASE_USE_ANOTHER_EMAIL": "Este correo electrónico fue registrado. Por favor use otro correo electrónico",
+        "INCORRECT_EMAIL_PASSWORD_COMBINATION": "¡Combinación de contraseña de correo electrónico incorrecta!",
+        "USER_NOT_FOUND": "usuario no encontrado",
+        "TOKEN_NOT_FOUND": "Ficha no encontrada",
+        "TOKEN_EXPIRED": "Token caducado",
+        "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "La contraseña y la confirmación de contraseña deben ser iguales.",
+        "INVALID_PASSWORD_FORMAT": "Formato de contraseña no válido",
+        "INTERNAL_SERVER_ERROR": "Error Interno del Servidor."
+    }
 }

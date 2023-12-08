@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ILanguageOption, LocalStorageManager } from 'millez-components-lib/components';
-import { forkJoin, Subject } from 'rxjs';
+import { forkJoin } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +16,10 @@ export class I18nService {
   start() {
     this.translateService.addLangs(['en', 'pt', 'es', 'fr']);
     this.translateService.setDefaultLang('en');
-    this.buildLanguageOptions('start');
+    this.buildLanguageOptions();
   }
 
-  private buildLanguageOptions(from: string) {
-    console.log(`buildLanguageOptions from ${from}`)
+  private buildLanguageOptions() {
     const ENGLISH =  this.translateService.get('ENGLISH');
     const PORTUGUESE = this.translateService.get('PORTUGUESE');
     const SPANISH = this.translateService.get('SPANISH');

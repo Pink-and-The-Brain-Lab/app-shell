@@ -39,5 +39,19 @@
     "USER_AGREEMENT_TERMS": "Termos e Condições do Contrato do Usuário",
     "ALREADY_HAVE_AN_ACCOUNT": "Já tem uma conta?",
     "DIDNT_RECIEVE_AN_EMAIL": "Não recebeu um e-mail? Pode levar alguns minutos para receber o e-mail.",
-    "RESEND": "Reenviar"
+    "RESEND": "Reenviar",
+
+
+    "API_ERRORS": {
+        "ERROR_TO_SAVE_NEW_PASSWORD": "Erro ao salvar a nova senha!",
+        "NEW_PASSWORD_AND_OLD_PASSWORD_CAN_NOT_BE_EQUALS": "A nova senha e a senha antiga não podem ser iguais!",
+        "THIS_EMAIL_WAS_REGISTERED_PLEASE_USE_ANOTHER_EMAIL": "Este e-mail ja foi cadastrado. Por favor use outro e-mail",
+        "INCORRECT_EMAIL_PASSWORD_COMBINATION": "Combinação incorreta de senha e e-mail!",
+        "USER_NOT_FOUND": "usuário não encontrado",
+        "TOKEN_NOT_FOUND": "Token não encontrado",
+        "TOKEN_EXPIRED": "O token expirou",
+        "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "A senha e a confirmação da senha precisam ser iguais.",
+        "INVALID_PASSWORD_FORMAT": "formato de senha inválido",
+        "INTERNAL_SERVER_ERROR": "Erro do Servidor Interno."
+    }
 }

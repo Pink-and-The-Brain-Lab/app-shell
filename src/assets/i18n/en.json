@@ -39,5 +39,19 @@
     "USER_AGREEMENT_TERMS": "User Agreement Terms and Conditions",
     "ALREADY_HAVE_AN_ACCOUNT": "Already have an account?",
     "DIDNT_RECIEVE_AN_EMAIL": "Didn’t received an email? It might take a few minutes to receive the email.",
-    "RESEND": "Resend"
+    "RESEND": "Resend",
+
+
+    "API_ERRORS": {
+        "ERROR_TO_SAVE_NEW_PASSWORD": "Error to save new password!",
+        "NEW_PASSWORD_AND_OLD_PASSWORD_CAN_NOT_BE_EQUALS": "New password and old password can not be equals!",
+        "THIS_EMAIL_WAS_REGISTERED_PLEASE_USE_ANOTHER_EMAIL": "This email was registered. Please use another email",
+        "INCORRECT_EMAIL_PASSWORD_COMBINATION": "Incorrect email password combination!",
+        "USER_NOT_FOUND": "user not found",
+        "TOKEN_NOT_FOUND": "Token not found",
+        "TOKEN_EXPIRED": "Token expired",
+        "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "Password and password confirmation need to be equals.",
+        "INVALID_PASSWORD_FORMAT": "Invalid password format",
+        "INTERNAL_SERVER_ERROR": "Internal server error."
+    }
 }

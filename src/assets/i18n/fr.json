@@ -39,5 +39,19 @@
     "USER_AGREEMENT_TERMS": "Conditions générales du contrat d'utilisation",
     "ALREADY_HAVE_AN_ACCOUNT": "Vous avez déjà un compte?",
     "DIDNT_RECIEVE_AN_EMAIL": "Vous n'avez pas reçu d'e-mail ? La réception de l'e-mail peut prendre quelques minutes.",
-    "RESEND": "Renvoyer"
+    "RESEND": "Renvoyer",
+
+
+    "API_ERRORS": {
+        "ERROR_TO_SAVE_NEW_PASSWORD": "Erreur lors de l'enregistrement du nouveau mot de passe !",
+        "NEW_PASSWORD_AND_OLD_PASSWORD_CAN_NOT_BE_EQUALS": "Le nouveau mot de passe et l'ancien mot de passe ne peuvent pas être égaux !",
+        "THIS_EMAIL_WAS_REGISTERED_PLEASE_USE_ANOTHER_EMAIL": "Cet email a été enregistré. Veuillez utiliser une autre adresse e-mail",
+        "INCORRECT_EMAIL_PASSWORD_COMBINATION": "Combinaison incorrecte de l'E-mail / Mot de passe!",
+        "USER_NOT_FOUND": "utilisateur non trouvé",
+        "TOKEN_NOT_FOUND": "Jeton introuvable",
+        "TOKEN_EXPIRED": "Jeton expiré",
+        "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "Le mot de passe et la confirmation du mot de passe doivent être égaux.",
+        "INVALID_PASSWORD_FORMAT": "format de mot de passe invalide",
+        "INTERNAL_SERVER_ERROR": "Erreur interne du serveur."
+    }
 }
