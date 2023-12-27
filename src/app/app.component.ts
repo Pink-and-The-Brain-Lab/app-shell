@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { AuthService } from './shared/auth.service';
 import { I18nService } from './services/i18n/i18n.service';
-import { ThemeChangerService } from './services/theme/theme-changer.service';
+import { Theme, ThemeChangerService } from 'millez-components-lib/components';
 
 @Component({
   selector: 'app-root',
@@ -14,14 +14,13 @@ export class AppComponent {
   toogleActionsBar = false;
   isLoggedIn = true;
   private readonly themeChangerService = inject(ThemeChangerService);
+  private readonly authService = inject(AuthService);
+  private readonly i18nService = inject(I18nService);
 
-  constructor(
-    private authService: AuthService,
-    private i18nService: I18nService,
-  ) {
+  constructor() {
     this.isLoggedIn = this.authService.isLoggedIn();
     this.i18nService.start();
-    this.themeChangerService.loadTheme('dark');
+    this.themeChangerService.loadTheme(Theme.DARK);
   }
 
   actionsBarEvent() {
