@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { LocalStorageManager } from 'millez-components-lib/components';
 
 @Injectable({
@@ -6,7 +6,9 @@ import { LocalStorageManager } from 'millez-components-lib/components';
 })
 export class AuthService {
 
+  private readonly localStorageManager = inject(LocalStorageManager)
+
   isLoggedIn() {
-    return !!LocalStorageManager.get<string>('token');
+    return !!this.localStorageManager.get<string>('token');
   }
 }

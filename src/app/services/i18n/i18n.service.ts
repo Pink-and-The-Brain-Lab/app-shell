@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { ILanguageOption, LocalStorageManager } from 'millez-components-lib/components';
 import { forkJoin } from 'rxjs';
@@ -7,11 +7,10 @@ import { forkJoin } from 'rxjs';
   providedIn: 'root'
 })
 export class I18nService {
-  languageOptions: ILanguageOption[] = [];
 
-  constructor(
-    public translateService: TranslateService,
-  ) {}
+  private readonly localStorageManager = inject(LocalStorageManager);
+  private readonly translateService = inject(TranslateService);
+  languageOptions: ILanguageOption[] = [];
 
   start() {
     this.translateService.addLangs(['en', 'pt', 'es', 'fr']);
@@ -46,7 +45,7 @@ export class I18nService {
           label: _response[3],
         }];
 
-        LocalStorageManager.set<ILanguageOption[]>('languageOptions', this.languageOptions);
+        this.localStorageManager.set<ILanguageOption[]>('languageOptions', this.languageOptions);
       }
     );
   }

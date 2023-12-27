@@ -1,11 +1,10 @@
-@import "variables";
 @import "em";
 
 .header {
     &__informationButton {
         background-color: transparent;
         border: 0;
-        color: $emphasis-high;
+        color: var(--emphasis-high);
         font-size: to-em(16);
     }
 

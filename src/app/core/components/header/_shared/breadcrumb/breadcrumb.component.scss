@@ -1,16 +1,15 @@
-@import "variables";
 @import "em";
 
 .breadcrumb {
     &__item {
         font-size: to-em(14);
-        color: $emphasis-medium;
+        color: var(--emphasis-medium);
         text-decoration: none;
 
         &:first-child {
             font-weight: 500;
             font-size: to-em(18);
-            color: $emphasis-high;
+            color: var(--emphasis-high);
         }
 
         i {

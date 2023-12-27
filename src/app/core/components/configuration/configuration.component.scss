@@ -1,4 +1,3 @@
-@import "variables";
 @import "em";
 
 div {
@@ -10,12 +9,12 @@ div {
 
     &:hover {
         i {
-            color: $emphasis-high;    
+            color: var(--emphasis-high);
         }
     }
 
     i {
         font-size: to-em(18);
-        color: $emphasis-low;
+        color: var(--emphasis-low);
     }
 }

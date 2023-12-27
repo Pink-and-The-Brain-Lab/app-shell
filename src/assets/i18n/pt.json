@@ -40,6 +40,13 @@
     "ALREADY_HAVE_AN_ACCOUNT": "Já tem uma conta?",
     "DIDNT_RECIEVE_AN_EMAIL": "Não recebeu um e-mail? Pode levar alguns minutos para receber o e-mail.",
     "RESEND": "Reenviar",
+    "AT_LEAST": "Pelo menos",
+    "CHARACTERS": "caracteres",
+    "INCLUDING_A": "incluindo um",
+    "NUMBER": "número",
+    "AND_A": "e um",
+    "LETTER": "letra",
+    "CONFIRM_PASSWORD": "Confirme sua senha",
 
 
     "API_ERRORS": {
@@ -53,5 +60,11 @@
         "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "A senha e a confirmação da senha precisam ser iguais.",
         "INVALID_PASSWORD_FORMAT": "formato de senha inválido",
         "INTERNAL_SERVER_ERROR": "Erro do Servidor Interno."
+    },
+
+
+    "FORM_VALIDATIONS": {
+        "PASSWORD_CONFIRMATION_REQUIRED": "A confirmação da senha é necessária",
+        "PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "A senha e a confirmação precisam ser iguais"
     }
 }

@@ -34,14 +34,40 @@
 							"./node_modules/bootstrap-icons/font/bootstrap-icons.css",
 							"./node_modules/millez-components-lib/assets/styles.css",
 							"node_modules/ngx-toastr/toastr.css",
-							"src/styles.scss"
+							"src/styles.scss",
+							{
+								"input": "src/assets/themes/theme-dark.scss",
+								"bundleName": "dark",
+								"inject": false
+							},
+							{
+								"input": "src/assets/themes/theme-light-purple.scss",
+								"bundleName": "lightPurple",
+								"inject": false
+							},
+							{
+								"input": "src/assets/themes/theme-light.scss",
+								"bundleName": "light",
+								"inject": false
+							},
+							{
+								"input": "src/assets/themes/theme-navy.scss",
+								"bundleName": "navy",
+								"inject": false
+							},
+							{
+								"input": "src/assets/themes/theme-purple.scss",
+								"bundleName": "purple",
+								"inject": false
+							}
 						],
 						"stylePreprocessorOptions": {
 							"includePaths": ["node_modules/millez-components-lib/assets/"]
 						  },
 						"scripts": [],
 						"extraWebpackConfig": "webpack.config.js",
-						"commonChunk": false
+						"commonChunk": false,
+						"namedChunks": true
 					},
 					"configurations": {
 						"production": {

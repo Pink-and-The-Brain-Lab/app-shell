@@ -1,4 +1,3 @@
-@import "variables";
 @import "em";
 
 .navigation-bar {
@@ -7,16 +6,16 @@
         text-decoration: none;
         text-transform: uppercase;
         font-size: to-em(16);
-        color: $emphasis-low;
+        color: var(--emphasis-low);
         font-weight: 600;
     
         &:hover {
-            color: $emphasis-medium;
+            color: var(--emphasis-medium);
         }
     
         &--active {
-            background-color: $alpha-10;
-            color: $emphasis-medium;
+            background-color: var(--alpha-10);
+            color: var(--emphasis-medium);
         }
     
         &__text {
