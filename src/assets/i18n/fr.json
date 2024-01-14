@@ -3,7 +3,7 @@
     "PORTUGUESE": "Portugais",
     "SPANISH": "Espagnol",
     "FRENCH": "Français",
-    "WELCOME": "Bienvenu",
+    "WELCOME": "Bienvenu!",
     "QR_CODE_LOGIN": "Connectez-vous avec le code QR",
     "SCAN_THIS_CODE": "Scannez ce code avec l'application mobile Zellim Chat pour vous connecter",
     "LOGIN_TO_CONTINUE": "Connectez-vous pour continuer",
@@ -59,6 +59,7 @@
         "TOKEN_EXPIRED": "Jeton expiré",
         "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "Le mot de passe et la confirmation du mot de passe doivent être égaux.",
         "INVALID_PASSWORD_FORMAT": "format de mot de passe invalide",
+        "INVALID_EMAIL": "Email invalide",
         "INTERNAL_SERVER_ERROR": "Erreur interne du serveur."
     },
 

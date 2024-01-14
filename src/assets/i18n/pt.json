@@ -3,7 +3,7 @@
     "PORTUGUESE": "Português",
     "SPANISH": "Espanhol",
     "FRENCH": "Francês",
-    "WELCOME": "Bem vindo",
+    "WELCOME": "Bem vindo!",
     "QR_CODE_LOGIN": "Login com QR code",
     "SCAN_THIS_CODE": "Leia este código com o aplicativo Zellim Chat para fazer login",
     "LOGIN_TO_CONTINUE": "Faça login para continuar",
@@ -59,6 +59,7 @@
         "TOKEN_EXPIRED": "O token expirou",
         "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "A senha e a confirmação da senha precisam ser iguais.",
         "INVALID_PASSWORD_FORMAT": "formato de senha inválido",
+        "INVALID_EMAIL": "E-mail inválido",
         "INTERNAL_SERVER_ERROR": "Erro do Servidor Interno."
     },
 
