@@ -4,7 +4,7 @@ import { QuickMenuComponent } from './quick-menu.component';
 import { UserStatusModule } from './_shared/user-status/user-status.module';
 import { ThemeOptionsModule } from './_shared/theme-options/theme-options.module';
 import { TimeoutModule } from './_shared/timeout/timeout.module';
-import { AvatarModule, LogoModule, ToogleModule } from 'millez-components-lib/components';
+import { AvatarModule, LogoModule, ToogleModule } from 'millez-web-components/dist/components';
 
 @NgModule({
   declarations: [

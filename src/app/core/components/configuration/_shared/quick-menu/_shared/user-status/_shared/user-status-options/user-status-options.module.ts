@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UserStatusOptionsComponent } from './user-status-options.component';
-import { UserStatusBulletModule } from 'millez-components-lib/components';
+import { UserStatusBulletModule } from 'millez-web-components/dist/components';
 
 @NgModule({
   declarations: [

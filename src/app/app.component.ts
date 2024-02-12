@@ -1,7 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { AuthService } from './shared/auth.service';
 import { I18nService } from './services/i18n/i18n.service';
-import { Theme, ThemeChangerService } from 'millez-components-lib/components';
+import { Theme, ThemeChangerService } from 'millez-web-components/dist/components';
 
 @Component({
   selector: 'app-root',

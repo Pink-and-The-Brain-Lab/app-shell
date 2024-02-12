@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthdGuard } from './shared/authguard.guard';
 import { TranslateModule } from '@ngx-translate/core';
-import { I18N_CONFIG } from 'millez-components-lib/components';
+import { I18N_CONFIG } from 'millez-web-components/dist/components';
 
 const routes: Routes = [{
   path: '',

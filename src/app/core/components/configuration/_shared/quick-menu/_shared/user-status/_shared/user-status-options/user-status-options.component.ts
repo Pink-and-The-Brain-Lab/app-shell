@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { UserStatus } from 'millez-components-lib/components/lib/user-status-bullet/models/user-status';
+import { UserStatus } from 'millez-web-components/dist/components/lib/user-status-bullet/models/user-status';
 
 interface IStatusOptions {
   label: string;

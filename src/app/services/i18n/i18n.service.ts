@@ -1,6 +1,6 @@
 import { Injectable, inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { ILanguageOption, LocalStorageManager } from 'millez-components-lib/components';
+import { ILanguageOption, LocalStorageManager, Storage } from 'millez-web-components/dist/components';
 import { forkJoin } from 'rxjs';
 
 @Injectable({
@@ -45,7 +45,7 @@ export class I18nService {
           label: _response[3],
         }];
 
-        this.localStorageManager.set<ILanguageOption[]>('languageOptions', this.languageOptions);
+        this.localStorageManager.set<ILanguageOption[]>(Storage.LANGUAGE_OPTIONS, this.languageOptions);
       }
     );
   }

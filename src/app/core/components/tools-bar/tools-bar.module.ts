@@ -8,7 +8,7 @@ import { PerfilIndicatorModule } from '../perfil-indicator/perfil-indicator.modu
 import { RecordScreenModule } from '../record-screen/record-screen.module';
 import { HelpCenterModule } from '../help-center/help-center.module';
 import { RefreshSystemModule } from '../refresh-system/refresh-system.module';
-import { LogoModule } from 'millez-components-lib/components';
+import { LogoModule } from 'millez-web-components/dist/components';
 import { ConfigurationModule } from '../configuration/configuration.module';
 
 @NgModule({
