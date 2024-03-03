@@ -1,4 +1,4 @@
-<ng-container *ngIf="isLoggedIn">
+<ng-container *ngIf="showDashboard">
     <main class="app d-flex">
         <div class="app__toolsBar h-100 flex-grow-0">
             <app-tools-bar></app-tools-bar>
@@ -24,6 +24,6 @@
     </main>
 </ng-container>
 
-<ng-container *ngIf="!isLoggedIn">
+<ng-container *ngIf="!showDashboard">
     <router-outlet></router-outlet>
 </ng-container>

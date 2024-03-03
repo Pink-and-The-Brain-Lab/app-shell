@@ -47,6 +47,44 @@
     "AND_A": "and a",
     "LETTER": "letter",
     "CONFIRM_PASSWORD": "Confirm Password",
+    "CHOSEN_A_PROFILE_NAME": "Chosen a Profile Name",
+    "OUR_PROFILE_SYSTEM": "Our Profile System gives you the power and flexibility to separate your social identities.",
+    "MANAGE_AND_ORGANIZE": "Manage and organize your Circles of Influence across all of your business, personal and hobby lives.",
+    "PROFILE_NAME": "Profile Name",
+    "NAME_SHOULD_BE_4": "name should be 4 characters at least",
+    "BACK": "Back",
+    "CHOSEN_NAME": "Chosen Name",
+    "CHOOSE_PHONE_NUMBER": "Choose a Phone Number for Your New Profile",
+    "THIS_PHONE_NUMBER_WILL_BE_USED": "This phone number will be used to send you notifications via SMS or to send you the code to validate the Two Factor Authentication in case if you set it up.",
+    "VALIDATE_PHONE_NUMBER_FOR_YOUR_NEW_PROFILE": "Validate Phone Number for Your New Profile",
+    "YOUR_PHONE_NUMBER_RECIEVED_A_CODE_VIA_SMS": "Your phone number received a code via SMS, use this code to validate your phone number.",
+    "CHOOSE_AN_EMAIL_FOR_YOUR_NEW_PROFILE": "Choose an Email for Your New Profile",
+    "THIS_IS_THE_EMAIL_THAT_WILL_BE": "This is the email that will be displayed in your new profile.",
+    "THIS_EMAIL_DOESNT_HAVE_TO_BE": "This email doesn’t have to be the same as the email to access Zellim.",
+    "VERIFY_EMAIL": "Verify Email",
+    "EMAIL_VERIFIED": "Email Verified",
+    "EMAIL_UNAVAILABLE": "Email unavailable",
+    "LETS_CUSTOMIZE_YOUR_PROFILE_AVATAR": "Let’s customize your Profile Avatar",
+    "YOU_CAN_CHANGE_THIS_LATER_IN_YOUR_PROFILE_SETTINGS": "You can change this later in your profile settings",
+    "PROFILE": "Profile",
+    "YOU_ARE_ABLE_TO_CREATE": "You are able to create one profile or multiple profiles within smash, putting you in control of how that data is shared and who with. By creating one smash profile you will be able to keep your information, contacts and data.",
+    "NEW_PROFILE": "New Profile",
+    "ORGANIZATION": "Organization",
+    "ORGANIZATIONS_ARE_A_NETWORK": "Organizations are a network of profiles and information. The organization creator has ownership of all data and profiles within the organization as well as the ability to grant permissions, set rolls, tasks and much more.",
+    "NEW_ORGANIZATION": "New Organization",
+    "PROVIDE_YOUR_CHOSEN_NAME": "Provide your Chosen Name",
+    "A_CHOSEN_NAME_PROVIDES": "A Chosen Name provides you flexibility to be seen and known as whatever fits this profile Circle of Influence the best.",
+    "WHETER_IT_IS_YOUR_LEGAL_NAME": "Whether it is your legal name, professional name with honorifics or your gamer nickname, you control how your name will be seen by others.",
+    "SELECT_YOUR_PROFILE_TYPE": "Select your Profile Type",
+    "THESE_SETTINGS_CONTROL_THE_VISIBILITY_OF_THIS_PROFILE": "These settings control the visibility of this Profile. It can be Public or Private and you can adjust it at any time through your Profile Settings.",
+    "PRIVATE": "Private",
+    "PUBLIC": "Public",
+    "CREATE_PROFILE": "Create Profile",
+    "CHOOSE_A_THEME": "Choose a theme",
+    "YOU_CAN_CHANGE_THIS_LATER": "You can change this later in your profile preferences",
+
+
+
 
 
     "API_ERRORS": {
@@ -60,7 +98,12 @@
         "PASSWORD_AND_PASSWORD_CONFIRMATION_NEED_TO_BE_EQUALS": "Password and password confirmation need to be equals.",
         "INVALID_PASSWORD_FORMAT": "Invalid password format",
         "INVALID_EMAIL": "Invalid email",
-        "INTERNAL_SERVER_ERROR": "Internal server error."
+        "INTERNAL_SERVER_ERROR": "Internal server error.",
+        "USER_NOT_VALIDATED": "User not validated",
+        "EMAIL_UNAVAILABLE": "Email unavailable",
+        "CELLPHONE_NUMBER_UNAVAILABLE": "Cellphone number unavailable",
+        "PROFILE_NOT_FOUND": "Profile not found",
+        "NOT_ALLOWED": "Not allowed"
     },
 
 

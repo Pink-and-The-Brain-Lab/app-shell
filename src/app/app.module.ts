@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardModule } from './pages/dashboard/dashboard.module';
-import { AvatarModule, I18N_CONFIG, UserStatusBulletModule } from 'millez-web-components/dist/components';
+import { AvatarModule, DashboardVisualizationControlState, I18N_CONFIG, LanguageChangeState, UserStatusBulletModule } from 'millez-web-components/dist/components';
 import { HeaderModule } from './core/components/header/header.module';
 import { ToolsBarModule } from './core/components/tools-bar/tools-bar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -35,7 +35,10 @@ import { ApiRequestsInterceptorInterceptor } from './shared/api-requests-interce
     }),
     ActionsBarModule,
     TooltipModule.forRoot(DefaultTooltipOptions as TooltipOptions),
-    NgxsModule.forRoot([]),
+    NgxsModule.forRoot([
+      DashboardVisualizationControlState,
+      LanguageChangeState,
+    ]),
     TranslateModule.forRoot(I18N_CONFIG),
   ],
   providers: [{ 
