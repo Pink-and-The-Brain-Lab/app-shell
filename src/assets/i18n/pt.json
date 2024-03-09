@@ -100,7 +100,8 @@
         "EMAIL_UNAVAILABLE": "E-mail indisponível",
         "CELLPHONE_NUMBER_UNAVAILABLE": "Número de celular indisponível",
         "PROFILE_NOT_FOUND": "Perfil Não Encontrado",
-        "NOT_ALLOWED": "Não permitido"
+        "NOT_ALLOWED": "Não permitido",
+        "YOU_CANNOT_CREATE_MORE_THAN_THREE_PROFILES": "Você não pode criar mais de três perfis."
     },
 
 
