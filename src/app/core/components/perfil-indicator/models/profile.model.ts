@@ -30,7 +30,7 @@ export class ProfileModel {
         this.profileTheme = profile.profileTheme;
         this.logoutTime = profile.logoutTime;
         this.dateFormat = profile.dateFormat;
-        this.validated = profile.selected,
+        this.validated = profile.validated,
         this.selected = profile.selected,
         this.language = profile.language;
         this.createdat = profile.createdat;

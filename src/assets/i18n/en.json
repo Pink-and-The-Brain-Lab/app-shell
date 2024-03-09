@@ -82,6 +82,8 @@
     "CREATE_PROFILE": "Create Profile",
     "CHOOSE_A_THEME": "Choose a theme",
     "YOU_CAN_CHANGE_THIS_LATER": "You can change this later in your profile preferences",
+    "PROFILE_NEEDS_VALIDATION_TITLE": "Profile needs validation",
+    "PROFILE_NEEDS_VALIDATION_TEXT": "You need to validate your profile",
 
 
 

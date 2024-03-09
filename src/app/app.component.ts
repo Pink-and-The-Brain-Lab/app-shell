@@ -4,7 +4,6 @@ import { I18nService } from './services/i18n/i18n.service';
 import {
   DashboardVisualizationControlState,
   IDashboardVisualizationControl,
-  IProfile,
   LocalStorageManager,
   ProfileAction,
   Storage,
@@ -16,9 +15,7 @@ import { Observable } from 'rxjs';
 import { GenericCRUDService } from './services/generic-crud.service';
 import { API_PATH } from './configurations/api-path';
 import { IProfiles } from './interfaces/profiles.interface';
-import { Socket } from 'ngx-socket-io';
 import { SetProfilePreferencesService } from './services/set-profile-preferences.service';
-// import { SocketService } from './socket.service';
 
 @Component({
   selector: 'app-root',

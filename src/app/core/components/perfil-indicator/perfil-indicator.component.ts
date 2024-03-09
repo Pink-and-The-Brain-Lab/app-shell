@@ -10,33 +10,39 @@ import { ISelectProfile } from './interfaces/select-profile.interface';
 import { ISelectProfileResponse } from './interfaces/select-profile-response.interface';
 import { HandleError } from 'src/app/handle-error/handle-error';
 import { SocketService } from 'src/app/services/socket.service';
+import { ToastrService } from 'ngx-toastr';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-perfil-indicator',
   templateUrl: './perfil-indicator.component.html',
-  styleUrls: ['./perfil-indicator.component.scss']
+  styleUrls: ['./perfil-indicator.component.scss'],
 })
-export class PerfilIndicatorComponent extends HandleError implements OnDestroy, OnInit {
-
+export class PerfilIndicatorComponent
+  extends HandleError
+  implements OnDestroy, OnInit
+{
   @Select(ProfilesState)
   profiles$!: Observable<IProfile[]>;
   private destroy$ = new Subject<boolean>();
   private readonly router = inject(Router);
   private readonly genericCRUDService = inject(GenericCRUDService);
   private readonly socketService = inject(SocketService);
+  private readonly toastrService = inject(ToastrService);
+  private readonly translatePipe = inject(TranslatePipe);
   profiles: ProfileModel[] = [];
   imageBaseUrl = API_PATH.getProfileAvatar;
 
   ngOnInit(): void {
+    this.socketService.getProfiles();
     this.profiles$
-      .pipe(
-        takeUntil(this.destroy$)
-      )
+      .pipe(takeUntil(this.destroy$))
       .subscribe(
-        response => this.profiles = response.map(item => new ProfileModel(item))
+        (response) => {
+          this.profiles = response.map((item) => new ProfileModel(item));
+          this.checkIfProfileNeedValidation();
+        }
       );
-
-      this.socketService.getProfiles();
   }
 
   ngOnDestroy(): void {
@@ -50,13 +56,34 @@ export class PerfilIndicatorComponent extends HandleError implements OnDestroy, 
 
   changeProfile(profileId: string) {
     this.genericCRUDService
-      .genericPost<ISelectProfileResponse, ISelectProfile>(API_PATH.selectProfile, { profileId })
-        .pipe(
-          takeUntil(this.destroy$)
-        )
-        .subscribe({
-          error: _error => super.handleError(_error),
-        })
+      .genericPost<ISelectProfileResponse, ISelectProfile>(
+        API_PATH.selectProfile,
+        { profileId }
+      )
+      .pipe(takeUntil(this.destroy$))
+      .subscribe({
+        error: (_error) => super.handleError(_error),
+      });
   }
 
+  private checkIfProfileNeedValidation() {
+    const selectedProfile = this.profiles.filter(item => item.selected)[0];
+    if (selectedProfile?.validated) {
+      this.toastrService.clear();
+      return;
+    }
+
+    this.toastrService
+      .warning(
+        this.translatePipe.transform('PROFILE_NEEDS_VALIDATION_TEXT'),
+        this.translatePipe.transform('PROFILE_NEEDS_VALIDATION_TITLE'),
+        {
+          disableTimeOut: true,
+        }
+      )
+      .onTap.subscribe(() => {
+        this.router.navigate(['/new-profile/choose-phone-number']);
+        this.toastrService.clear();
+      });
+  }
 }

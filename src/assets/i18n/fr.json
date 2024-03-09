@@ -82,6 +82,8 @@
     "CREATE_PROFILE": "Créer un profil",
     "CHOOSE_A_THEME": "Choisissez un thème",
     "YOU_CAN_CHANGE_THIS_LATER": "Vous pourrez modifier cela ultérieurement dans les préférences de votre profil",
+    "PROFILE_NEEDS_VALIDATION_TITLE": "Le profil doit être validé",
+    "PROFILE_NEEDS_VALIDATION_TEXT": "Vous devez valider votre profil",
 
 
     "API_ERRORS": {
