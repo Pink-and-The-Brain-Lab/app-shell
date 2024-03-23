@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PopoverModule } from '@app/_cdk/directives/popover/popover.module';
 import { ThemeOptionsComponent } from './theme-options.component';
 import { ThemeOptionModule } from './_shared/theme-option/theme-option.module';
+import { PopoverModule } from 'millez-web-components/dist/components';
 
 describe('ThemeOptionsComponent', () => {
   let component: ThemeOptionsComponent;

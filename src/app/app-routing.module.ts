@@ -6,15 +6,15 @@ import { I18N_CONFIG } from 'millez-web-components/dist/components';
 
 const routes: Routes = [{
   path: '',
-  loadChildren: async () => (await import('./pages/dashboard/dashboard.module')).DashboardModule,
+  loadChildren: () => import('./pages/dashboard/dashboard.module').then(m => m.DashboardModule),
   pathMatch: 'full',
   canActivate: [AuthdGuard]
 }, {
   path: 'login',
-  loadChildren: async () => (await import('appLogin/Module')).LoginModule
+  loadChildren: () => import('appLogin/Module').then(m => m.LoginModule)
 }, {
   path: 'new-profile',
-  loadChildren: async () => (await import('appNewProfile/Module')).NewProfileModule,
+  loadChildren: () => import('appNewProfile/Module').then(m => m.NewProfileModule),
   canActivate: [AuthdGuard]
 }];
 

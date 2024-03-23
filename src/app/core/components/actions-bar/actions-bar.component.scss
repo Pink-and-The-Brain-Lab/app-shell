@@ -1,5 +1,5 @@
-@import "em";
-@import "polygon-mask";
+@import "node_modules/millez-web-components/dist/assets/em";
+@import "node_modules/millez-web-components/dist/assets/polygon-mask";
 
 @mixin buttonIconAnimation($value) {
   i {

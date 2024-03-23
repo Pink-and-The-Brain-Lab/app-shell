@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { RadioButtomModule } from '@app/_cdk/components/radio-buttom/radio-buttom.module';
 import { ThemeOptionComponent } from './theme-option.component';
+import { RadioButtonModule } from 'millez-web-components/dist/components';
 
 describe('ThemeOptionComponent', () => {
   let component: ThemeOptionComponent;
@@ -11,7 +11,7 @@ describe('ThemeOptionComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ThemeOptionComponent ],
       imports: [
-        RadioButtomModule,
+        RadioButtonModule,
         FormsModule
       ]
     })
