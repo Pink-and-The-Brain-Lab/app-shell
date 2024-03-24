@@ -1,8 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UserStatusBulletModule } from '@app/_cdk/components/user-status-bullet/user-status-bullet.module';
-import { PopoverModule } from '@app/_cdk/directives/popover/popover.module';
 import { UserStatusOptionsModule } from './_shared/user-status-options/user-status-options.module';
 import { UserStatusComponent } from './user-status.component';
+import { PopoverModule, UserStatusBulletModule } from 'millez-web-components/dist/components';
 
 describe('UserStatusComponent', () => {
   let component: UserStatusComponent;

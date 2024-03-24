@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { RadioButtomModule } from '@app/_cdk/components/radio-buttom/radio-buttom.module';
 import { TimeoutOptionComponent } from './timeout-option.component';
+import { RadioButtonModule } from 'millez-web-components/dist/components';
 
 describe('TimeoutOptionComponent', () => {
   let component: TimeoutOptionComponent;
@@ -11,7 +11,7 @@ describe('TimeoutOptionComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TimeoutOptionComponent ],
       imports: [
-        RadioButtomModule,
+        RadioButtonModule,
         FormsModule
       ]
     })

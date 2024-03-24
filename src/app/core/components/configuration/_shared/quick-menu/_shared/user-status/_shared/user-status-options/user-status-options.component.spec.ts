@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { UserStatusBulletModule } from '@app/_cdk/components/user-status-bullet/user-status-bullet.module';
 import { UserStatusOptionsComponent } from './user-status-options.component';
+import { UserStatusBulletModule } from 'millez-web-components/dist/components';
 
 describe('UserStatusOptionsComponent', () => {
   let component: UserStatusOptionsComponent;

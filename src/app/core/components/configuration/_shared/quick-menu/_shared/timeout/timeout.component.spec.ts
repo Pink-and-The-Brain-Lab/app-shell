@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PopoverModule } from '@app/_cdk/directives/popover/popover.module';
 import { TimeoutComponent } from './timeout.component';
 import { TimeoutOptionModule } from './_shared/timeout-option/timeout-option.module';
+import { PopoverModule } from 'millez-web-components/dist/components';
 
 describe('TimeoutComponent', () => {
   let component: TimeoutComponent;

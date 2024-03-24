@@ -1,11 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { LogoModule } from '@app/core/components/logo/logo.module';
-import { AvatarModule } from '@app/_cdk/components/avatar/avatar.module';
-import { ToogleModule } from '@app/_cdk/components/toogle/toogle.module';
 import { QuickMenuComponent } from './quick-menu.component';
 import { ThemeOptionsModule } from './_shared/theme-options/theme-options.module';
 import { TimeoutModule } from './_shared/timeout/timeout.module';
 import { UserStatusModule } from './_shared/user-status/user-status.module';
+import { AvatarModule, LogoModule, ToogleModule } from 'millez-web-components/dist/components';
 
 describe('QuickMenuComponent', () => {
   let component: QuickMenuComponent;

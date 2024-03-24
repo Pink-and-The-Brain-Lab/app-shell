@@ -56,11 +56,8 @@ export class AppComponent implements OnInit {
   }
 
   getLanguageFromStorage() {
-    const storagedLanguage = this.localStorageManager.get<string>(
-      Storage.SELECTED_LAGUAGE
-    );
-    if (storagedLanguage)
-      this.i18nService.changeLanguage({ value: storagedLanguage, label: '' });
+    const storagedLanguage = this.localStorageManager.get<string>(Storage.SELECTED_LAGUAGE);
+    if (storagedLanguage) this.i18nService.changeLanguage({ value: storagedLanguage, label: '' });
   }
 
   private getProfiles() {

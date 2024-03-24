@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { PopoverModule } from '@app/_cdk/directives/popover/popover.module';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { ConfigurationComponent } from './configuration.component';
 import { QuickMenuModule } from './_shared/quick-menu/quick-menu.module';
+import { PopoverModule } from 'millez-web-components/dist/components';
 
 describe('ConfigurationComponent', () => {
   let component: ConfigurationComponent;

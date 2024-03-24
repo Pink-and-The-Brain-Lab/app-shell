@@ -35,10 +35,10 @@ import { ApiRequestsInterceptorInterceptor } from './shared/api-requests-interce
     ToolsBarModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    ActionsBarModule,
     ToastrModule.forRoot({
       progressBar: true,
     }),
-    ActionsBarModule,
     TooltipModule.forRoot(DefaultTooltipOptions as TooltipOptions),
     NgxsModule.forRoot([
       DashboardVisualizationControlState,
