@@ -4,7 +4,8 @@ import { PerfilIndicatorComponent } from './perfil-indicator.component';
 import { TooltipModule } from 'ng2-tooltip-directive';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
-const socketConfig: SocketIoConfig = { url: 'http://localhost:5000', options: {} };
+import { environment } from 'src/environments/environment';
+const socketConfig: SocketIoConfig = { url: environment.baseUlrs.profileSocket, options: {} };
 
 @NgModule({
   declarations: [

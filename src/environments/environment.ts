@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   baseUlrs: {
-    profile: 'http://localhost:3003'
+    profile: 'http://localhost:3003',
+    profileSocket: 'http://localhost:5000',
   },
 };
 
