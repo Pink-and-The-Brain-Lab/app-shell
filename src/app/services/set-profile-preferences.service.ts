@@ -14,5 +14,6 @@ export class SetProfilePreferencesService {
     this.localStorageManager.set<string>(Storage.SELECTED_THEME, profile.profileTheme || Theme.DARK);
     this.i18nService.changeLanguage({ value: profile.language || 'en', label: '' });
     this.localStorageManager.set<string>(Storage.SELECTED_LAGUAGE, profile.language || 'en');
+    this.localStorageManager.set<string>(Storage.PROFILE_ID, profile.id || '');
   }
 }
