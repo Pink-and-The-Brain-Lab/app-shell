@@ -31,8 +31,6 @@
     "google-libphonenumber": "3.2.30",
     "millez-web-components": "0.0.19",
     "ngx-image-cropper": "7.0.1",
-    "ngx-socket-io": "^4.6.1",
-    "ngx-toastr": "17.0.2",
     "rxjs": "7.8.0",
     "tslib": "2.3.0",
     "zone.js": "0.12.0"
