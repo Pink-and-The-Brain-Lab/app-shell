@@ -12,7 +12,7 @@
   },
   "private": true,
   "dependencies": {
-    "@angular-architects/module-federation": "15.0.3",
+    "@angular-architects/module-federation": "18.0.6",
     "@angular/animations": "15.1.0",
     "@angular/cdk": "15.1.2",
     "@angular/common": "15.1.0",
