@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TooltipModule } from 'ng2-tooltip-directive';
+// import { TooltipModule } from 'ng2-tooltip-directive';
 import { TimerComponent } from './timer.component';
 
 describe('TimerComponent', () => {
@@ -10,7 +10,7 @@ describe('TimerComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ TimerComponent ],
       imports: [
-        TooltipModule,
+        // TooltipModule,
       ]
     })
     .compileComponents();

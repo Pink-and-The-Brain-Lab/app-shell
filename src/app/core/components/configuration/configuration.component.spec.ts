@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TooltipModule } from 'ng2-tooltip-directive';
+// import { TooltipModule } from 'ng2-tooltip-directive';
 import { ConfigurationComponent } from './configuration.component';
 import { QuickMenuModule } from './_shared/quick-menu/quick-menu.module';
 import { PopoverModule } from 'millez-web-components/dist/components';
@@ -12,7 +12,7 @@ describe('ConfigurationComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ ConfigurationComponent ],
       imports: [
-        TooltipModule,
+        // TooltipModule,
         QuickMenuModule,
         PopoverModule,
       ]

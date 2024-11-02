@@ -2,11 +2,11 @@
   <div
     class="perfil-indicator__list d-flex flex-column align-items-center w-100"
   >
+  <!-- [tooltip]="profile.profileName" -->
     <div
       class="perfil-indicator__list__item perfil-indicator__list__item{{
         profile.selected ? '--active' : ''
       }} d-flex flex-column align-items-center mb-2 w-100"
-      [tooltip]="profile.profileName"
       placement="right"
       *ngFor="let profile of profiles"
       (click)="changeProfile(profile.id)"
@@ -17,10 +17,10 @@
     </div>
   </div>
 
+  <!-- tooltip="Add new profile" -->
   <button
     type="button"
     class="perfil-indicator__addPerfil mb-3"
-    tooltip="Add new profile"
     placement="right"
     (click)="createProfile()"
     *ngIf="profiles.length < 3"

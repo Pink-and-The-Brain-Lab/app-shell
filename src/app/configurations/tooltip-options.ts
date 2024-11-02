@@ -1,6 +1,6 @@
-import { TooltipOptions } from 'ng2-tooltip-directive';
+// import { TooltipOptions } from 'ng2-tooltip-directive';
 
-export const DefaultTooltipOptions: TooltipOptions = {
-  showDelay: 0,
-  hideDelay: 0,
-};
+// export const DefaultTooltipOptions: TooltipOptions = {
+//   showDelay: 0,
+//   hideDelay: 0,
+// };

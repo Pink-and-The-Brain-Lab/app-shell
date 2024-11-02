@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { NavigationBarComponent } from './navigation-bar.component';
-import { TooltipModule } from 'ng2-tooltip-directive';
+// import { TooltipModule } from 'ng2-tooltip-directive';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { TooltipModule } from 'ng2-tooltip-directive';
   ],
   imports: [
     CommonModule,
-    TooltipModule,
+    // TooltipModule,
   ]
 })
 export class NavigationBarModule { }

@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TooltipModule } from 'ng2-tooltip-directive';
+// import { TooltipModule } from 'ng2-tooltip-directive';
 import { SearchComponent } from './search.component';
 
 describe('SearchComponent', () => {
@@ -10,7 +10,7 @@ describe('SearchComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ SearchComponent ],
       imports: [
-        TooltipModule,
+        // TooltipModule,
       ]
     })
     .compileComponents();

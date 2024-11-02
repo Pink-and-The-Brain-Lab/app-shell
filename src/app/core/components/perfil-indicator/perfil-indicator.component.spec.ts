@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TooltipModule } from 'ng2-tooltip-directive';
+// import { TooltipModule } from 'ng2-tooltip-directive';
 import { PerfilIndicatorComponent } from './perfil-indicator.component';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -27,7 +27,7 @@ describe('PerfilIndicatorComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ PerfilIndicatorComponent ],
       imports: [
-        TooltipModule,
+        // TooltipModule,
         HttpClientTestingModule,
         NoopAnimationsModule,
         RouterTestingModule.withRoutes([]),

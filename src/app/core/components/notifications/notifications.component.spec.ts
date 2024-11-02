@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { TooltipModule } from 'ng2-tooltip-directive';
+// import { TooltipModule } from 'ng2-tooltip-directive';
 import { NotificationsComponent } from './notifications.component';
 
 describe('NotificationsComponent', () => {
@@ -10,7 +10,7 @@ describe('NotificationsComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ NotificationsComponent ],
       imports: [
-        TooltipModule
+        // TooltipModule
       ]
     })
     .compileComponents();
