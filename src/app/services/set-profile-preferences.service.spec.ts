@@ -1,13 +1,11 @@
 import { TestBed } from '@angular/core/testing';
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { SetProfilePreferencesService } from './set-profile-preferences.service';
 import { IProfile, LocalStorageManager, Storage, Theme, ThemeChangerService } from 'millez-web-components/dist/components';
 import { I18nService } from './i18n/i18n.service';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { NgxsModule } from '@ngxs/store';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 const profileMock: IProfile = {
   id: '12345',
@@ -33,16 +31,15 @@ describe('SetProfilePreferencesService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        HttpClientTestingModule,
-        TranslateModule.forRoot(),
-        NgxsModule.forRoot([]),
-      ],
-      providers: [
+    imports: [TranslateModule.forRoot(),
+        NgxsModule.forRoot([])],
+    providers: [
         TranslatePipe,
-        SetProfilePreferencesService
-      ],
-    });
+        SetProfilePreferencesService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+    ]
+});
     service = TestBed.inject(SetProfilePreferencesService);
     httpController = TestBed.inject(HttpTestingController);
   });

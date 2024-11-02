@@ -17,43 +17,37 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActionsBarModule } from './core/components/actions-bar/actions-bar.module';
 // import { TooltipModule, TooltipOptions } from 'ng2-tooltip-directive';
 // import { DefaultTooltipOptions } from './configurations/tooltip-options';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxsModule } from '@ngxs/store';
 import { TranslateModule } from '@ngx-translate/core';
 import { ApiRequestsInterceptorInterceptor } from './shared/api-requests-interceptor.interceptor';
 
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    DashboardModule,
-    AvatarModule,
-    UserStatusBulletModule,
-    HeaderModule,
-    ToolsBarModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    ActionsBarModule,
-    ToastrModule.forRoot({
-      progressBar: true,
-    }),
-    // TooltipModule.forRoot(DefaultTooltipOptions as TooltipOptions),
-    NgxsModule.forRoot([
-      DashboardVisualizationControlState,
-      LanguageChangeState,
-      ProfilesState,
-    ]),
-    TranslateModule.forRoot(I18N_CONFIG),
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: ApiRequestsInterceptorInterceptor,
-      multi: true,
-    },
-  ],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        DashboardModule,
+        AvatarModule,
+        UserStatusBulletModule,
+        HeaderModule,
+        ToolsBarModule,
+        BrowserAnimationsModule,
+        ActionsBarModule,
+        ToastrModule.forRoot({
+            progressBar: true,
+        }),
+        // TooltipModule.forRoot(DefaultTooltipOptions as TooltipOptions),
+        NgxsModule.forRoot([
+            DashboardVisualizationControlState,
+            LanguageChangeState,
+            ProfilesState,
+        ]),
+        TranslateModule.forRoot(I18N_CONFIG)], providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: ApiRequestsInterceptorInterceptor,
+            multi: true,
+        },
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {}

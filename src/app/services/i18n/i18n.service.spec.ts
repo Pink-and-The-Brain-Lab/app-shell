@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { I18nService } from './i18n.service';
 import { TranslateModule, TranslatePipe, TranslateService } from '@ngx-translate/core';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import {} from '@angular/common/http/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NgxsModule, Store } from '@ngxs/store';

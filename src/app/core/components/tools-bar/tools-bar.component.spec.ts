@@ -12,10 +12,11 @@ import { LogoModule } from 'millez-web-components/dist/components';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { ToastrService } from 'ngx-toastr';
 import TOASTR_SERVICE_MOCK from 'src/app/mocks/toastr-service.test.mock';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NgxsModule } from '@ngxs/store';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('ToolsBarComponent', () => {
   let component: ToolsBarComponent;
@@ -23,9 +24,8 @@ describe('ToolsBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ToolsBarComponent ],
-      imports: [
-        LogoModule,
+    declarations: [ToolsBarComponent],
+    imports: [LogoModule,
         SearchModule,
         NotificationsModule,
         TimerModule,
@@ -35,16 +35,16 @@ describe('ToolsBarComponent', () => {
         RefreshSystemModule,
         ConfigurationModule,
         TranslateModule.forRoot(),
-        HttpClientTestingModule,
         NoopAnimationsModule,
         RouterTestingModule.withRoutes([]),
-        NgxsModule.forRoot([]),
-      ],
-      providers: [
+        NgxsModule.forRoot([])],
+    providers: [
         TranslatePipe,
         { provide: ToastrService, useValue: TOASTR_SERVICE_MOCK },
-      ]
-    })
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+    ]
+})
     .compileComponents();
   });
 

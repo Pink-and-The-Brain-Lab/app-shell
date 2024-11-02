@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 // import { TooltipModule } from 'ng2-tooltip-directive';
 import { PerfilIndicatorComponent } from './perfil-indicator.component';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ToastrService } from 'ngx-toastr';
@@ -14,6 +14,7 @@ import { ProfileAction, ProfilesState } from 'millez-web-components/dist/compone
 import { Router } from '@angular/router';
 import { GenericCRUDService } from 'src/app/services/generic-crud.service';
 import { ProfileModel } from './models/profile.model';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 const mockSocketService = {
     getProfiles: () => of({})
@@ -25,23 +26,21 @@ describe('PerfilIndicatorComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ PerfilIndicatorComponent ],
-      imports: [
-        // TooltipModule,
-        HttpClientTestingModule,
-        NoopAnimationsModule,
+    declarations: [PerfilIndicatorComponent],
+    imports: [NoopAnimationsModule,
         RouterTestingModule.withRoutes([]),
         TranslateModule.forRoot(),
         NgxsModule.forRoot([
             ProfilesState
-        ]),
-      ],
-      providers: [
+        ])],
+    providers: [
         TranslatePipe,
         { provide: ToastrService, useValue: TOASTR_SERVICE_MOCK },
         { provide: SocketService, useValue: mockSocketService },
-      ]
-    })
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+    ]
+})
     .compileComponents();
   });
 

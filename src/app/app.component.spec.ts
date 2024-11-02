@@ -6,9 +6,9 @@ import { AvatarModule, LocalStorageManager, UserStatusBulletModule } from 'mille
 import { HeaderModule } from './core/components/header/header.module';
 import { ToolsBarModule } from './core/components/tools-bar/tools-bar.module';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ActionsBarModule } from './core/components/actions-bar/actions-bar.module';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { NgxsModule, Store } from '@ngxs/store';
 import { ToastrService } from 'ngx-toastr';
@@ -24,27 +24,45 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-        declarations: [AppComponent],
-        imports: [
-            DashboardModule,
-            AvatarModule,
-            UserStatusBulletModule,
-            HeaderModule,
-            ToolsBarModule,
-            BrowserAnimationsModule,
-            HttpClientModule,
-            ActionsBarModule,
-            HttpClientTestingModule,
-            NoopAnimationsModule,
-            RouterTestingModule.withRoutes([]),
-            TranslateModule.forRoot(),
-            NgxsModule.forRoot([]),
-        ],
-        providers: [
-          TranslatePipe,
-          { provide: ToastrService, useValue: TOASTR_SERVICE_MOCK },
-        ]
-    }).compileComponents();
+    declarations: [AppComponent],
+    imports: [DashboardModule,
+        AvatarModule,
+        UserStatusBulletModule,
+        HeaderModule,
+        ToolsBarModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        ActionsBarModule,
+        NoopAnimationsModule,
+        RouterTestingModule.withRoutes([]),
+        TranslateModule.forRoot(),
+        NgxsModule.forRoot([])],
+    providers: [
+        TranslatePipe,
+        { provide: ToastrService, useValue: TOASTR_SERVICE_MOCK },
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+    ]
+}{
+    declarations: [AppComponent],
+    imports: [DashboardModule,
+        AvatarModule,
+        UserStatusBulletModule,
+        HeaderModule,
+        ToolsBarModule,
+        BrowserAnimationsModule,
+        ActionsBarModule,
+        HttpClientTestingModule,
+        NoopAnimationsModule,
+        RouterTestingModule.withRoutes([]),
+        TranslateModule.forRoot(),
+        NgxsModule.forRoot([])],
+    providers: [
+        TranslatePipe,
+        { provide: ToastrService, useValue: TOASTR_SERVICE_MOCK },
+        provideHttpClient(withInterceptorsFromDi()),
+    ]
+}).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);
     component = fixture.componentInstance;

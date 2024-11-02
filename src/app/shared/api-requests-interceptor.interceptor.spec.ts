@@ -1,27 +1,26 @@
 import { TestBed } from '@angular/core/testing';
 import { ApiRequestsInterceptorInterceptor } from './api-requests-interceptor.interceptor';
 import { LocalStorageManager } from 'millez-web-components/dist/components';
-import { HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
+import { HTTP_INTERCEPTORS, HttpClient, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 
 describe('ApiRequestsInterceptorInterceptor', () => {
   let httpMock: HttpTestingController;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [
+    imports: [],
+    providers: [
         ApiRequestsInterceptorInterceptor,
         {
-          provide: HTTP_INTERCEPTORS,
-          useClass: ApiRequestsInterceptorInterceptor,
-          multi: true,
+            provide: HTTP_INTERCEPTORS,
+            useClass: ApiRequestsInterceptorInterceptor,
+            multi: true,
         },
-      ],
-    });
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting(),
+    ]
+});
 
     httpMock = TestBed.inject(HttpTestingController);
   });

@@ -1,14 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { NgxsModule, Store } from '@ngxs/store';
 import { SocketService } from './socket.service';
 import { Socket, SocketIoModule } from 'ngx-socket-io';
 import { of } from 'rxjs';
 import { SetProfilePreferencesService } from './set-profile-preferences.service';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('SocketService', () => {
   let service: SocketService;
@@ -16,17 +14,16 @@ describe('SocketService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        HttpClientTestingModule,
-        TranslateModule.forRoot(),
+    imports: [TranslateModule.forRoot(),
         NgxsModule.forRoot([]),
-        SocketIoModule.forRoot({ url: '' })
-      ],
-      providers: [
+        SocketIoModule.forRoot({ url: '' })],
+    providers: [
         TranslatePipe,
-        SocketService
-      ],
-    });
+        SocketService,
+        provideHttpClient(withInterceptorsFromDi()),
+        provideHttpClientTesting()
+    ]
+});
     service = TestBed.inject(SocketService);
     httpController = TestBed.inject(HttpTestingController);
   });
