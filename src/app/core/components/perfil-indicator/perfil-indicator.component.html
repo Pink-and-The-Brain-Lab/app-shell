@@ -2,8 +2,8 @@
   <div
     class="perfil-indicator__list d-flex flex-column align-items-center w-100"
   >
-  <!-- [tooltip]="profile.profileName" -->
     <div
+      [cdkTooltip]="profile.profileName"
       class="perfil-indicator__list__item perfil-indicator__list__item{{
         profile.selected ? '--active' : ''
       }} d-flex flex-column align-items-center mb-2 w-100"
@@ -17,8 +17,8 @@
     </div>
   </div>
 
-  <!-- tooltip="Add new profile" -->
   <button
+    cdkTooltip="Add new profile"
     type="button"
     class="perfil-indicator__addPerfil mb-3"
     placement="right"

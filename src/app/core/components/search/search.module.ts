@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchComponent } from './search.component';
-// import { TooltipModule } from 'ng2-tooltip-directive';
+import { TooltipModule } from 'millez-web-components/dist/components';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { SearchComponent } from './search.component';
   ],
   imports: [
     CommonModule,
-    // TooltipModule,
+    TooltipModule,
   ]
 })
 export class SearchModule { }

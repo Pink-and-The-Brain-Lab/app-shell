@@ -16,7 +16,7 @@ export class ProfileModel {
     validated = false;
     selected = false;
     language = '';
-    createdat = 0;
+    createdAt = 0;
 
     constructor (profile: IProfile) {
         this.id = profile.id;
@@ -33,7 +33,7 @@ export class ProfileModel {
         this.validated = profile.validated,
         this.selected = profile.selected,
         this.language = profile.language;
-        this.createdat = profile.createdat;
+        this.createdAt = profile.createdAt;
     }
 
     get profileAvatar(): string {

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RecordScreenComponent } from './record-screen.component';
-// import { TooltipModule } from 'ng2-tooltip-directive';
+import { TooltipModule } from 'millez-web-components/dist/components';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { RecordScreenComponent } from './record-screen.component';
   ],
   imports: [
     CommonModule,
-    // TooltipModule,
+    TooltipModule,
   ]
 })
 export class RecordScreenModule { }

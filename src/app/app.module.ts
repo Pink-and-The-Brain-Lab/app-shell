@@ -15,8 +15,6 @@ import { HeaderModule } from './core/components/header/header.module';
 import { ToolsBarModule } from './core/components/tools-bar/tools-bar.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ActionsBarModule } from './core/components/actions-bar/actions-bar.module';
-// import { TooltipModule, TooltipOptions } from 'ng2-tooltip-directive';
-// import { DefaultTooltipOptions } from './configurations/tooltip-options';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { ToastrModule } from 'ngx-toastr';
 import { NgxsModule } from '@ngxs/store';
@@ -36,7 +34,6 @@ import { ApiRequestsInterceptorInterceptor } from './shared/api-requests-interce
         ToastrModule.forRoot({
             progressBar: true,
         }),
-        // TooltipModule.forRoot(DefaultTooltipOptions as TooltipOptions),
         NgxsModule.forRoot([
             DashboardVisualizationControlState,
             LanguageChangeState,

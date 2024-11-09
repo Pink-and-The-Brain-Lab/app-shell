@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { TooltipModule } from 'ng2-tooltip-directive';
 import { SearchComponent } from './search.component';
+import { TooltipModule } from 'millez-web-components/dist/components';
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -10,7 +10,7 @@ describe('SearchComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ SearchComponent ],
       imports: [
-        // TooltipModule,
+        TooltipModule,
       ]
     })
     .compileComponents();

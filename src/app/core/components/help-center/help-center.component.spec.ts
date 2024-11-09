@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { TooltipModule } from 'ng2-tooltip-directive';
 import { HelpCenterComponent } from './help-center.component';
+import { TooltipModule } from 'millez-web-components/dist/components';
 
 describe('HelpCenterComponent', () => {
   let component: HelpCenterComponent;
@@ -10,7 +10,7 @@ describe('HelpCenterComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ HelpCenterComponent ],
       imports: [
-        // TooltipModule,
+        TooltipModule,
       ]
     })
     .compileComponents();

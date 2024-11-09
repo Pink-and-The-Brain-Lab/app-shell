@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { TooltipModule } from 'ng2-tooltip-directive';
 import { PerfilIndicatorComponent } from './perfil-indicator.component';
 import { TranslateModule, TranslatePipe } from '@ngx-translate/core';
 import { provideHttpClientTesting } from '@angular/common/http/testing';

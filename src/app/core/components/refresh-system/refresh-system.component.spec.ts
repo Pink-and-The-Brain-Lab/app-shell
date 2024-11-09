@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { TooltipModule } from 'ng2-tooltip-directive';
 import { RefreshSystemComponent } from './refresh-system.component';
+import { TooltipModule } from 'millez-web-components/dist/components';
 
 describe('RefreshSystemComponent', () => {
   let component: RefreshSystemComponent;
@@ -10,7 +10,7 @@ describe('RefreshSystemComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ RefreshSystemComponent ],
       imports: [
-        // TooltipModule,
+        TooltipModule,
       ]
     })
     .compileComponents();

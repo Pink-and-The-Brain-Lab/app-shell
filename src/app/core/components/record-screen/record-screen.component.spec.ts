@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { TooltipModule } from 'ng2-tooltip-directive';
 import { RecordScreenComponent } from './record-screen.component';
+import { TooltipModule } from 'millez-web-components/dist/components';
 
 describe('RecordScreenComponent', () => {
   let component: RecordScreenComponent;
@@ -10,7 +10,7 @@ describe('RecordScreenComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ RecordScreenComponent ],
       imports: [
-        // TooltipModule,
+        TooltipModule,
       ]
     })
     .compileComponents();
