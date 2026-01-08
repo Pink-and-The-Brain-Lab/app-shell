@@ -103,7 +103,8 @@
         "CELLPHONE_NUMBER_UNAVAILABLE": "Número de celular no disponible",
         "PROFILE_NOT_FOUND": "Perfil no encontrado",
         "NOT_ALLOWED": "No permitido",
-        "YOU_CANNOT_CREATE_MORE_THAN_THREE_PROFILES": "No puedes crear más de tres perfiles."
+        "YOU_CANNOT_CREATE_MORE_THAN_THREE_PROFILES": "No puedes crear más de tres perfiles.",
+        "PROVIDE_AN_IMAGE_NAME": "Debes proporcionar un nombre para la imagen."
     },
 
 
